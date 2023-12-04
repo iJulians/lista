@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jéssica&Juliano</title>
+  <!-- font -->
+  <link rel="stylesheet" href="https://use.typekit.net/caj1lhh.css">
+  <!-- icons -->
+  <script src="https://kit.fontawesome.com/b4ee1c271e.js" crossorigin="anonymous"></script>
+  
+  <style>
+    :root {
+      --tea-green: #ccd5aeff;
+      --beige: #e9edc9ff;
+      --cornsilk: #fefae0ff;
+      --papaya-whip: #faedcdff;
+      --buff: #d4a373ff;
+      --font-pri:'nunito', 'sans-serif';
+
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+    background-color: var(--buff)
+    }
+    
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    h4 {
+      color: var(--buff);
+      font-family: var(--font-pri);
+    }
+
+    .container {
+      padding: 0% 5%;
+    }
+
+    /* -----------------------cabecalho/paina inicial--------------------------------- */
+
+    .cabecalho {
+      width: 100%;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .divisor {
+      content: '';
+      width: 100%;
+      height: .4rem;
+      box-shadow: 0px 15px 20px rgba(254, 250, 224, 0.2);
+      margin-bottom: 4rem;
+    }
+    /* -------------------------- navegation ---------------------------------------------- */
+    .container-nav {
+      padding: 2rem;
+      position: fixed;
+    }
+
+   .list-nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .list-nav li a {
+      color: var(--cornsilk);
+      font-family: var(--font-pri);
+      font-size: 2rem;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .list-nav li a::after{
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: scaleX(0);
+      transition: all 300ms ease-in-out;
+      border-bottom: solid 2px var(--cornsilk);
+      background-color: var(--cornsilk);
+    }
+    .list-nav li a:hover::after,
+    .list-nav li a.active::after {
+      transform: scaleX(1);
+    }
+
+    /* --------------------------------------- pagina inicial ----------------------------------------- */
+
+    .container-initial {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .container-initial p {
+      font-family: var(--font-pri);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--cornsilk);
+    }
+
+    /* ------------------------------------------------------Gifts---------------------------------------- */
+    .container-gifts {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .container-gifts h2 {
+      padding: 2rem;
+      font: 3rem var(--font-pri);
+      font-weight: 600;
+      color: var(--cornsilk);
+    }
+
+    .all-gifts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      gap: 2rem;
+
+    }
+
+    /* .container-gift {
+    } */
+
+    .content-gift {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: .5rem;
+      background-color: var(--papaya-whip);
+      border-radius: 1.25rem;
+      width: 20rem;
+      height: 27rem;
+    }
+
+    .container-gift img {
+      max-width: 80%;
+      max-height: fit-content;
+      object-fit: contain;
+    }
+
+    .content-gift a {
+      padding: .8rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font: 1rem var(--font-pri);
+      color: var(--beige);
+      background-color: var(--buff);
+    }
+  </style>
+
+
+</head>
+<body>
+  <header class="cabecalho">
+    <nav class="container-nav">
+      <ul class="list-nav">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#list">Presentes</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="container-initial container" id="home">
+      <div class="img-casal">
+        <img src="" alt="">
+      </div>
+      <p class="mensage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit incidunt maxime reiciendis alias, 
+        voluptates, minus magni odit quod nostrum ducimus distinctio. Nisi ex officia quae iure quis voluptas corrupti sapiente.
+      </p>
+    </section>
+    <div class="divisor"></div>
+    <section class="container-gifts container" id="list">
+      <h2>Presentes</h2>
+      <div class="all-gifts">
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+        <article class="container-gift" id="gift1">
+          <div class="content-gift">
+            <img 
+            src="./assets/panela.webp"
+            alt=""
+            class="img-gift"
+            >
+            <h4 class="title-gift">Jogo de Panelas</h4>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Ver Disponibilidade</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
