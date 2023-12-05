@@ -93,7 +93,8 @@
 
   .container-initial {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+    gap: 1rem;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -110,12 +111,40 @@
   .img-casal {
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+    position: relative;
+  }
+
+  .img-casal::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    background-color: var(--tea-green);
+    top: -10.8%;
+    right: 19%;
+    
+    z-index: 0;
   }
 
   .img-casal img {
-    max-width: 80%;
+    max-width: 50%;
+    width: 400px;
     max-height: fit-content;
+    border-radius: 1.25rem;
+    position: relative;
+    z-index: 1;
+    right: 2.93rem;
   }
+
+ .img-casal img,
+ .img-casal::before {
+    border-radius: 1.25rem;
+ }
+  
+
+
 
   /* ------------------------------------------------------Gifts---------------------------------------- */
   .container-gifts {
@@ -174,4 +203,10 @@
     font: 1rem var(--font-pri);
     color: var(--tea-green);
     background-color: var(--fern-green);
+  }
+
+  @media screen and (max-width: 750px) {
+    .container-initial p {
+        font-size: 1.5rem;
+    }
   }
