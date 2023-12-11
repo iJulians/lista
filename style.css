@@ -4,8 +4,12 @@
     --celadon: #96e6b3ff;
     --fern-green: #568259ff;
     --outer-space: #464e47ff;
-    --font-pri:'nunito', 'sans-serif';
+    --font-pri:'montserrat';
 
+  }
+
+  html{
+    scroll-behavior: smooth;
   }
 
   * {
@@ -55,8 +59,8 @@
   }
   /* -------------------------- navegation ---------------------------------------------- */
   .container-nav {
-    padding: 2rem;
-    position: fixed;
+    padding: 1.25rem;
+    position: block;
   }
 
  .list-nav {
@@ -90,15 +94,19 @@
   }
 
   /* --------------------------------------- pagina inicial ----------------------------------------- */
+  .initial {
+    display: flex;
+    justify-content: center;
+  }
 
   .container-initial {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: center;
+    justify-content: stretch;
     width: 100%;
     height: 100vh;
+    margin: 1.25rem;
   }
 
   .container-initial p {
@@ -106,50 +114,44 @@
     font-size: 2rem;
     font-weight: 600;
     color: var(--mint-cream);
+    padding: 1.5rem;
+    text-align: center;
   }
 
   .img-casal {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* overflow: hidden; */
-    position: relative;
-  }
-
-  .img-casal::before {
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 100%;
-    background-color: var(--tea-green);
-    top: -10.8%;
-    right: 19%;
     
-    z-index: 0;
+    
   }
 
   .img-casal img {
-    max-width: 50%;
-    width: 400px;
+    width: 50%;
     max-height: fit-content;
     border-radius: 1.25rem;
-    position: relative;
     z-index: 1;
     right: 2.93rem;
+    overflow: hidden;
+    z-index: 0;
   }
 
- .img-casal img,
- .img-casal::before {
-    border-radius: 1.25rem;
- }
-  
+  .img-casal img::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-color: var(--tea-green);
+    z-index: -1;
+    left: 19%;
+    top: 18%;
+  }
 
 
 
   /* ------------------------------------------------------Gifts---------------------------------------- */
   .container-gifts {
     width: 100%;
-    height: 100vh;
   }
 
   .container-gifts h2 {
@@ -157,17 +159,19 @@
     font: 3rem var(--font-pri);
     font-weight: 600;
     color: var(--mint-cream);
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
   }
 
   .all-gifts {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: 2rem;
-
+    margin: 5%;
+    justify-content: center;
+    align-items: center;
   }
-
-  /* .container-gift {
-  } */
 
   .content-gift {
     display: flex;
@@ -197,16 +201,94 @@
   }
 
   .content-gift a {
+    width: 50%;
     padding: .8rem;
     border-radius: 20px;
     text-decoration: none;
+    text-align: center;
     font: 1rem var(--font-pri);
     color: var(--tea-green);
     background-color: var(--fern-green);
+    transition: text-transform 2s ease-in-out;
+  }
+
+  .content-gift a:hover {
+    text-transform: uppercase;
+  }
+
+  /* recado -------------------------------------------------- */
+
+  .recado {
+    width: 100%;
+    height: 14.6rem;
+    font-family: var(--font-pri);
+    color: var(--mint-cream);
+
+  }
+
+  .recado h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 2rem;
+  }
+
+  .recado p {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+ /* back-to-top---------------------------------------------------- */
+  .back-to-top {
+    background: var(--tea-green);
+    color: var(--fern-green);
+  
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+  
+    padding: 0.5rem;
+    clip-path: circle();
+  
+    font-size: 1.5rem;
+    line-height: 0;
+  
+    visibility: hidden;
+    opacity: 0;
+  
+    transition: 0.3s;
+    transform: translateY(100%);
+  }
+
+  .back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   @media screen and (max-width: 750px) {
+
+    .list-nav li a {
+        font-size: 1.2rem;
+    }
+
+    .container-initial {
+        grid-template-columns: 1fr;
+    }
     .container-initial p {
         font-size: 1.5rem;
     }
+
+    .all-gifts {
+        margin: 5%;
+    }
+
+    .recado h2 {
+      font-size: 1.5rem;
+    }
+
+    .recado p {
+      font-size: 1.2rem;
+    }
+    
+
   }
