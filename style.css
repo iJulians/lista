@@ -136,7 +136,7 @@
     z-index: 0;
   }
 
-  .img-casal img::before {
+/*   .img-casal img::before {
     content: '';
     position: absolute;
     width: 200%;
@@ -145,7 +145,7 @@
     z-index: -1;
     left: 19%;
     top: 18%;
-  }
+  } */
 
 
 
