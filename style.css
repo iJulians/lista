@@ -141,7 +141,7 @@
     position: absolute;
     width: 200%;
     height: 200%;
-    background-color: var(--tea-green);
+    background-color: transparent;
     z-index: -1;
     left: 19%;
     top: 18%;
